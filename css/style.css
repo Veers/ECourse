@@ -3,15 +3,6 @@
 .footer {
     padding: 5px;
 }
-.content {
-    /*margin-top: 0;*/
-    /*position: fixed;*/
-    float: right;
-    width: 80%;
-    min-height: 70%;
-    /*overflow: auto;*/
-}
-
 html, body {
     min-width: 100%;
     min-height: 100%;
@@ -25,9 +16,20 @@ div.sidebar-wrapper{
     overflow: hidden;
 }
 
+.content {
+    /*margin-top: 0;*/
+    /*position: fixed;*/
+    float: right;
+    width: 80%;
+    height: 80vh;
+    position: relative;
+    /*overflow: auto;*/
+}
+
 .header {
     height: 15%;
     width: 100%;
+    position: relative;
     border-bottom: 5px dotted red;
     background-color: #ffffff;
     -webkit-border-top-left-radius: 5px;
@@ -40,7 +42,7 @@ div.sidebar-wrapper{
 .footer {
     ;
     height: 15%;
-    margin-top: -15%;
+    margin-top: 45%;
     position: relative;
     background-color: whiteSmoke;
     border-top: 5px dotted green;
