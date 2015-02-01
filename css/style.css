@@ -81,11 +81,12 @@ body {
 }
 
 #button1{
-    float: left;
+    left: 0;
+    position: absolute;
 }
 
 #button2{
-    float: right;
+    position:absolute; right: 0;
 }
 
 /*Блок меню Аккордеон*/
@@ -174,4 +175,12 @@ ul {
     font-weight: 500;
     border-radius:.769em;
     box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .26), 0px 1px 0px 0px rgba(255, 255, 255, .15);
+}
+
+.current_page {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    background-color: #b0e0e6;
+    text-align: center;
 }
