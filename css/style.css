@@ -42,6 +42,7 @@ body {
     -moz-border-radius-topright: 5px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
+    background-image: url("../pics/top.jpg");
 }
 
 .footer {
@@ -68,16 +69,22 @@ body {
 .title_header {
     text-align: right;
     padding-bottom: 5px;
+
 }
 .title_menu {
     text-align: center;
+    padding-top: 10px;
+    padding-bottom: 0px;
+    background: #737373;
 }
 
 .header_title_item {
-    border: 5px solid blue;
+    padding-right:5px;
+    color: #ffffff;
 }
 .header_menu_item {
     border: 5px dotted #ffff00;
+
 }
 
 #button1{
