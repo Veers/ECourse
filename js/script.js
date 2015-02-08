@@ -37,16 +37,30 @@ window.onload = function () {
         ul.animate({"height": height});
         //alert($(this).attr('href'));
         var str=$(this).attr('href');
-        if(str.indexOf('.html')) {
-           alert(str.substr(1,str.length));
+        if(str.indexOf('.html')!=-1) {
+           //alert(str.substr(1,str.length));
             $("#pdf_view").empty();
             $("#pdf_view").load(str.substr(1,str.length));
+        }
+        if(str.indexOf('.pdf')!=-1)
+        {
+            $("#pdf_view").empty();
+            var variabl = new PDFObject({url: str.substr(1,str.length)}).embed("pdf_view");
         }
         return false;
     });
 
     $("a.menu_item").click(function () {
-        alert("Menu small item")
+        var str=$(this).attr('href');
+        if(str.indexOf('.html')!=-1) {
+            $("#pdf_view").empty();
+            $("#pdf_view").load(str.substr(1,str.length));
+        }
+        if(str.indexOf('.pdf')!=-1)
+        {
+            $("#pdf_view").empty();
+            var variabl = new PDFObject({url: str.substr(1,str.length)}).embed("pdf_view");
+        }
     });
 
 };
