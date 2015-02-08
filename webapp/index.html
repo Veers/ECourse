@@ -49,47 +49,47 @@
                 <li>
                     <a href="#">Пункт Меню - 1</a>
                     <ul>
-                        <li><a href="#">Ссылка - 1</a></li>
-                        <li><a href="#">Ссылка - 2</a></li>
-                        <li><a href="#">Ссылка - 3</a></li>
-                        <li><a href="#">Ссылка - 4</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 1</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 2</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 3</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 4</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Пункт Меню - 2</a>
                     <ul>
-                        <li><a href="#">Ссылка - 1</a></li>
-                        <li><a href="#">Ссылка - 2</a></li>
-                        <li><a href="#">Ссылка - 3</a></li>
-                        <li><a href="#">Ссылка - 4</a></li>
-                        <li><a href="#">Ссылка - 5</a></li>
-                        <li><a href="#">Ссылка - 6</a></li>
-                        <li><a href="#">Ссылка - 7</a></li>
-                        <li><a href="#">Ссылка - 8</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 1</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 2</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 3</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 4</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 5</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 6</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 7</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 8</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Пункт Меню - 3</a>
                     <ul>
-                        <li><a href="#">Ссылка - 1</a></li>
-                        <li><a href="#">Ссылка - 2</a></li>
-                        <li><a href="#">Ссылка - 3</a></li>
-                        <li><a href="#">Ссылка - 4</a></li>
-                        <li><a href="#">Ссылка - 5</a></li>
-                        <li><a href="#">Ссылка - 6</a></li>
-                        <li><a href="#">Ссылка - 7</a></li>
-                        <li><a href="#">Ссылка - 8</a></li>
-                        <li><a href="#">Ссылка - 9</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 1</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 2</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 3</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 4</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 5</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 6</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 7</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 8</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 9</a></li>
                     </ul>
                 </li>
                 <li>
                     <a href="#">Пункт Меню - 4</a>
                     <ul>
-                        <li><a href="#">Ссылка - 1</a></li>
-                        <li><a href="#">Ссылка - 2</a></li>
-                        <li><a href="#">Ссылка - 3</a></li>
-                        <li><a href="#">Ссылка - 4</a></li>
-                        <li><a href="#">Ссылка - 5</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 1</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 2</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 3</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 4</a></li>
+                        <li><a href="#" class="menu_item">Ссылка - 5</a></li>
                     </ul>
                 </li>
             </ul>
@@ -109,17 +109,17 @@
 
 <!--</div>-->
 
-<script>
-    $(function() {
-        $(".mini-menu > ul > li > a").click(function() {
-            var ul = $(this).next(),
-                    clone = ul.clone().css({"height":"auto"}).appendTo(".mini-menu"),
-                    height = ul.css("height") === "0px" ? ul[0].scrollHeight + "px" : "0px";
-            clone.remove();
-            ul.animate({"height":height});
-            return false;
-        });
-    });
-</script>
+<!--<script>-->
+    <!--$(function() {-->
+        <!--$(".mini-menu > ul > li > a").click(function() {-->
+            <!--var ul = $(this).next(),-->
+                    <!--clone = ul.clone().css({"height":"auto"}).appendTo(".mini-menu"),-->
+                    <!--height = ul.css("height") === "0px" ? ul[0].scrollHeight + "px" : "0px";-->
+            <!--clone.remove();-->
+            <!--ul.animate({"height":height});-->
+            <!--return false;-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->
 </body>
 </html>
