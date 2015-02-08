@@ -82,6 +82,11 @@ body {
     padding-right:5px;
     color: #ffffff;
 }
+
+.header_title_item:hover {
+    color: #ffffff;
+}
+
 .header_menu_item {
     color: #a52a2f;
     padding-right: 10px;
