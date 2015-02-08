@@ -35,7 +35,13 @@ window.onload = function () {
             height = ul.css("height") === "0px" ? ul[0].scrollHeight + "px" : "0px";
         clone.remove();
         ul.animate({"height": height});
-        alert("Menu Item");
+        //alert($(this).attr('href'));
+        var str=$(this).attr('href');
+        if(str.indexOf('.html')) {
+           alert(str.substr(1,str.length));
+            $("#pdf_view").empty();
+            $("#pdf_view").load(str.substr(1,str.length));
+        }
         return false;
     });
 
