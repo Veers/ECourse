@@ -36,35 +36,38 @@ window.onload = function () {
         clone.remove();
         ul.animate({"height": height});
         //alert($(this).attr('href'));
-        var str=$(this).attr('href');
-        if(str.indexOf('.html')!=-1) {
-           //alert(str.substr(1,str.length));
+        var str = $(this).attr('href');
+        if (str.indexOf('.html') != -1) {
+            //alert(str.substr(1,str.length));
             $("#pdf_view").empty();
-            $("#pdf_view").load(str.substr(1,str.length));
+            $("#pdf_view").load(str.substr(1, str.length));
         }
-        if(str.indexOf('.pdf')!=-1)
-        {
+        if (str.indexOf('.pdf') != -1) {
             $("#pdf_view").empty();
-            var variabl = new PDFObject({url: str.substr(1,str.length)}).embed("pdf_view");
+            var variabl = new PDFObject({url: str.substr(1, str.length)}).embed("pdf_view");
         }
         return false;
     });
 
     $("a.menu_item").click(function () {
-        var str=$(this).attr('href');
-        if(str.indexOf('.html')!=-1) {
+        var str = $(this).attr('href');
+        if (str.indexOf('.html') != -1) {
             $("#pdf_view").empty();
-            $("#pdf_view").load(str.substr(1,str.length));
+            $("#pdf_view").load(str.substr(1, str.length));
         }
-        if(str.indexOf('.pdf')!=-1)
-        {
+        if (str.indexOf('.pdf') != -1) {
             $("#pdf_view").empty();
-            var variabl = new PDFObject({url: str.substr(1,str.length)}).embed("pdf_view");
+            var variabl = new PDFObject({url: str.substr(1, str.length)}).embed("pdf_view");
         }
     });
 
-    $("[data-toggle]").click(function() {
+    $("[data-toggle]").click(function () {
         var toggle_el = $(this).data("toggle");
+        var str = $(this).attr('href').split('#');
+        $(".sidebar").empty();
+        $(".sidebar").load(str[1]);
+        $("#pdf_view").empty();
+        $("#pdf_view").load(str[2]);
         $(toggle_el).toggleClass("open-sidebar");
     });
 
