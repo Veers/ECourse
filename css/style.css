@@ -2,19 +2,8 @@
 .footer {
     padding: 5px;
 }
-html {
-    min-width: 100%;
-    min-height: 100%;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-body {
-    min-width: 100%;
-    min-height: 100%;
-}
 
-.wraper {
+.wrapper {
     min-height:100%;
     position:relative;
 }
@@ -217,4 +206,9 @@ ul {
     width: 70%;
     background-color: #b0e0e6;
     text-align: center;
+}
+
+.big_text {
+    text-align: justify;
+    text-indent: 20px;
 }

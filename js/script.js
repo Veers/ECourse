@@ -1,33 +1,8 @@
 window.onload = function () {
-    //var myPDF = new PDFObject({ url: "sample.pdf" }).embed();
-    //var tree = documentTree();
 
-    //function readFile(file) {
-    //    var rawFile = new XMLHttpRequest();
-    //    rawFile.open("GET", file, false);
-    //    rawFile.onreadystatechange = function () {
-    //        if (rawFile.readyState === 4) {
-    //            if (rawFile.status === 200 || rawFile.status == 0) {
-    //                var allText = rawFile.responseText;
-    //                alert(allText);
-    //            }
-    //        }
-    //    }
-    //    rawFile.send(null);
-    //    return rawFile;
-    //}
+    new PDFObject({url: "../docs/1.pdf"}).embed("pdf_view");
 
-    //var file = readFile("file:///C:/Users/Punk/WebstormProjects/ECourse/test.txt");
-
-    var variablename = new PDFObject({url: "../docs/1.pdf"}).embed("pdf_view");
-
-    //var pdf_view = $('#pdf_view');
-    //var parentPdf = $('#pdf_view').parent();
-    //pdf_view.width(parentPdf.width());
-    //var height = $('#sidebar-wrapper').height();
-    //pdf_view.height(height);
-
-    //alert('test');
+    var pdf_view = $('#pdf_view');
 
     $(".mini-menu > ul > li > a").click(function () {
         var ul = $(this).next(),
@@ -39,12 +14,12 @@ window.onload = function () {
         var str = $(this).attr('href');
         if (str.indexOf('.html') != -1) {
             //alert(str.substr(1,str.length));
-            $("#pdf_view").empty();
-            $("#pdf_view").load(str.substr(1, str.length));
+            pdf_view.empty();
+            pdf_view.load(str.substr(1, str.length));
         }
         if (str.indexOf('.pdf') != -1) {
-            $("#pdf_view").empty();
-            var variabl = new PDFObject({url: str.substr(1, str.length)}).embed("pdf_view");
+            pdf_view.empty();
+            new PDFObject({url: str.substr(1, str.length)}).embed("pdf_view");
         }
         return false;
     });
@@ -52,23 +27,24 @@ window.onload = function () {
     $("a.menu_item").click(function () {
         var str = $(this).attr('href');
         if (str.indexOf('.html') != -1) {
-            $("#pdf_view").empty();
-            $("#pdf_view").load(str.substr(1, str.length));
+            pdf_view.empty();
+            pdf_view.load(str.substr(1, str.length));
         }
         if (str.indexOf('.pdf') != -1) {
             $("#pdf_view").empty();
-            var variabl = new PDFObject({url: str.substr(1, str.length)}).embed("pdf_view");
+            new PDFObject({url: str.substr(1, str.length)}).embed("pdf_view");
         }
     });
 
     $("[data-toggle]").click(function () {
-        var toggle_el = $(this).data("toggle");
+        //var toggle_el = $(this).data("toggle");
         var str = $(this).attr('href').split('#');
-        $(".sidebar").empty();
-        $(".sidebar").load(str[1]);
-        $("#pdf_view").empty();
-        $("#pdf_view").load(str[2]);
-        $(toggle_el).toggleClass("open-sidebar");
+        var sidebar = $('.sidebar');
+        sidebar.empty();
+        sidebar.load(str[1]);
+        pdf_view.empty();
+        pdf_view.load(str[2]);
+        //$(toggle_el).toggleClass("open-sidebar");
     });
 
 };
