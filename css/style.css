@@ -8,6 +8,10 @@
     position:relative;
 }
 
+html{
+    overflow-x: hidden;
+}
+
 .container_of_content {
     position: relative;
     height: 80%;

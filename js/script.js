@@ -37,14 +37,21 @@ window.onload = function () {
     });
 
     $("[data-toggle]").click(function () {
-        //var toggle_el = $(this).data("toggle");
+        var toggle_el = $(this).data("toggle");
         var str = $(this).attr('href').split('#');
         var sidebar = $('.sidebar');
         sidebar.empty();
         sidebar.load(str[1]);
         pdf_view.empty();
         pdf_view.load(str[2]);
-        //$(toggle_el).toggleClass("open-sidebar");
+        var left= $('.container_of_content').css('left');
+        if (left != "0px" ) {
+        } else $(toggle_el).toggleClass("open-sidebar");
+    });
+
+    $('.content').click(function(){
+        var toggle_el = $("[data-toggle]").data("toggle");
+        $(toggle_el).toggleClass("open-sidebar");
     });
 
 };
