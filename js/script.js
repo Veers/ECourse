@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    new PDFObject({url: "../docs/1.pdf"}).embed("pdf_view");
+    new PDFObject({url: "../docs/primer.pdf"}).embed("pdf_view");
 
     var pdf_view = $('#pdf_view');
 
